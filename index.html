@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تاون كلينك – Town Clinic | جميع التخصصات الطبية في مكان واحد</title>
+<meta name="description" content="تاون كلينك – عيادات لجميع التخصصات الطبية. فرع حدائق الأهرام وفرع حدائق أكتوبر. نهتم بصحتك وصحة أسرتك.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#2a8f9c; --teal-dark:#1d6f7a; --mint:#e6f4f4; --bg:#f6fbfb;
+    --ink:#23404a; --muted:#5d7a82; --line:#d3e8ea; --white:#fff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Cairo','Segoe UI',Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8;font-size:17px}
+  a{color:inherit;text-decoration:none}
+  .container{width:min(1080px,92%);margin-inline:auto}
+
+  /* Header */
+  header{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:800;font-size:20px;color:var(--teal-dark)}
+  .nav ul{display:flex;gap:22px;list-style:none;font-weight:600;font-size:15px}
+  .nav ul a:hover{color:var(--teal)}
+  .btn{display:inline-block;padding:10px 24px;border-radius:10px;font-weight:700;font-size:16px;border:1.5px solid var(--teal);transition:.2s}
+  .btn-primary{background:var(--teal);color:#fff}
+  .btn-primary:hover{background:var(--teal-dark);border-color:var(--teal-dark)}
+  .btn-outline{color:var(--teal-dark);background:transparent}
+  .btn-outline:hover{background:var(--mint)}
+
+  /* Hero */
+  .hero{padding:56px 0}
+  .hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  .hero h1{font-size:clamp(30px,5vw,46px);font-weight:800;line-height:1.4;color:var(--teal-dark)}
+  .hero p.sub{font-size:clamp(18px,2.6vw,22px);font-weight:600;margin-top:10px}
+  .hero p.tag{color:var(--muted);margin-top:8px}
+  .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+
+  /* Photo slots (صورة حقيقية فوق الرسمة، ولو مفيش صورة بتظهر الرسمة) */
+  .ph{position:relative;border-radius:16px;overflow:hidden;background:var(--mint);border:1px solid var(--line);aspect-ratio:4/3}
+  .ph svg,.ph img{position:absolute;inset:0;width:100%;height:100%}
+  .ph img{object-fit:cover}
+
+  /* Sections */
+  section{padding:52px 0}
+  .alt{background:var(--white);border-block:1px solid var(--line)}
+  h2{font-size:clamp(24px,3.5vw,32px);font-weight:800;color:var(--teal-dark);text-align:center}
+  .lead{text-align:center;color:var(--muted);margin:6px auto 30px;max-width:560px}
+
+  .grid{display:grid;gap:16px}
+  .specs{grid-template-columns:repeat(auto-fit,minmax(160px,1fr))}
+  .card{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:20px 14px;text-align:center}
+  .alt .card{background:var(--bg)}
+  .card .ic{font-size:30px;display:block;margin-bottom:4px}
+  .card b{font-weight:700}
+
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+  .about h2{text-align:right}
+  .about p{color:var(--muted);margin-top:10px}
+
+  .branches{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .branch{background:var(--white);border:1px solid var(--line);border-right:6px solid var(--teal);border-radius:14px;padding:22px}
+  .branch h3{font-size:21px;font-weight:800;color:var(--teal-dark)}
+  .branch p{margin-top:6px}
+  .branch .btn{margin-top:14px;padding:8px 20px;font-size:15px}
+
+  .contact{text-align:center}
+  .contact .cta{justify-content:center}
+
+  footer{background:var(--teal-dark);color:#e6f4f4;text-align:center;padding:22px 0;font-size:15px}
+
+  @media (max-width:760px){
+    .nav ul{display:none}
+    .hero-grid,.about{grid-template-columns:1fr}
+    .hero{padding:36px 0}
+    .about h2{text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#top" class="logo">تاون كلينك 🏥</a>
+    <ul>
+      <li><a href="#specialties">التخصصات</a></li>
+      <li><a href="#about">عن العيادات</a></li>
+      <li><a href="#branches">فروعنا</a></li>
+      <li><a href="#contact">احجز الآن</a></li>
+    </ul>
+    <a href="#contact" class="btn btn-primary">احجز موعد</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- Hero -->
+  <div class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>تاون كلينك – Town Clinic 🏥</h1>
+        <p class="sub">جميع التخصصات الطبية في مكان واحد</p>
+        <p class="tag">نهتم بصحتك وصحة أسرتك ❤️</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="#contact">احجز موعد</a>
+          <a class="btn btn-outline" href="#branches">اعرف فروعنا</a>
+        </div>
+      </div>
+      <!-- ضع صورة الدكتور في: images/doctor.jpg -->
+      <div class="ph">
+        <svg viewBox="0 0 200 150" aria-hidden="true">
+          <rect width="200" height="150" fill="#e6f4f4"/>
+          <path d="M45 150c0-34 24-52 55-52s55 18 55 52z" fill="#fff"/>
+          <path d="M85 100l15 24 15-24" fill="none" stroke="#2a8f9c" stroke-width="4" stroke-linecap="round"/>
+          <circle cx="100" cy="64" r="22" fill="#f1cfb4"/>
+          <path d="M78 59c2-18 42-18 44 0-9-6-35-6-44 0z" fill="#4a3b33"/>
+        </svg>
+        <img src="images/doctor.jpg" alt="طبيب في تاون كلينك" onerror="this.remove()">
+      </div>
+    </div>
+  </div>
+
+  <!-- Specialties -->
+  <section id="specialties" class="alt">
+    <div class="container">
+      <h2>تخصصاتنا الطبية</h2>
+      <p class="lead">أطباء في مختلف التخصصات لخدمتك أنت وأسرتك في مكان واحد.</p>
+      <!-- عدّل التخصصات حسب المتاح عندكم -->
+      <div class="grid specs">
+        <div class="card"><span class="ic">🩺</span><b>الباطنة</b></div>
+        <div class="card"><span class="ic">👶</span><b>الأطفال</b></div>
+        <div class="card"><span class="ic">🤰</span><b>النساء والتوليد</b></div>
+        <div class="card"><span class="ic">🦴</span><b>العظام</b></div>
+        <div class="card"><span class="ic">🧴</span><b>الجلدية</b></div>
+        <div class="card"><span class="ic">🦷</span><b>الأسنان</b></div>
+        <div class="card"><span class="ic">👂</span><b>الأنف والأذن والحنجرة</b></div>
+        <div class="card"><span class="ic">👁️</span><b>العيون</b></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container about">
+      <!-- ضع صورة العيادة في: images/clinic.jpg -->
+      <div class="ph">
+        <svg viewBox="0 0 200 150" aria-hidden="true">
+          <rect width="200" height="150" fill="#e6f4f4"/>
+          <rect x="50" y="30" width="100" height="105" rx="6" fill="#fff" stroke="#bfdfe2" stroke-width="3"/>
+          <rect x="90" y="95" width="20" height="40" fill="#9ccfd4"/>
+          <rect x="62" y="85" width="18" height="18" fill="#d3e8ea"/>
+          <rect x="120" y="85" width="18" height="18" fill="#d3e8ea"/>
+          <rect x="93" y="42" width="14" height="32" rx="2" fill="#2a8f9c"/>
+          <rect x="84" y="51" width="32" height="14" rx="2" fill="#2a8f9c"/>
+        </svg>
+        <img src="images/clinic.jpg" alt="عيادات تاون كلينك" onerror="this.remove()">
+      </div>
+      <div>
+        <h2>نهتم بصحتك وصحة أسرتك ❤️</h2>
+        <p>في تاون كلينك بنوفر لك كشف واستشارات طبية في أغلب التخصصات تحت سقف واحد، في مكان مريح وقريب منك، وبفريق أطباء بيهتم بكل مريض.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branches -->
+  <section id="branches" class="alt">
+    <div class="container">
+      <h2>📍 فروعنا</h2>
+      <p class="lead">اختار الفرع الأقرب ليك.</p>
+      <div class="grid branches">
+        <div class="branch">
+          <h3>فرع حدائق الأهرام</h3>
+          <p>البوابة الأولى – عمارة 174 ج</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Town+Clinic+%D8%AD%D8%AF%D8%A7%D8%A6%D9%82+%D8%A7%D9%84%D8%A3%D9%87%D8%B1%D8%A7%D9%85" target="_blank" rel="noopener">عرض على الخريطة</a>
+        </div>
+        <div class="branch">
+          <h3>فرع حدائق أكتوبر</h3>
+          <p>دجلة جاردنز – فوق صيدلية الفؤاد</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Town+Clinic+%D8%AF%D8%AC%D9%84%D8%A9+%D8%AC%D8%A7%D8%B1%D8%AF%D9%86%D8%B2+%D8%AD%D8%AF%D8%A7%D8%A6%D9%82+%D8%A3%D9%83%D8%AA%D9%88%D8%A8%D8%B1" target="_blank" rel="noopener">عرض على الخريطة</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>احجز موعدك الآن</h2>
+      <p class="lead">كلمنا وهنساعدك تحجز مع الدكتور المناسب.</p>
+      <div class="cta">
+        <!-- غيّر الرقم 01XXXXXXXXX برقمكم في الرابطين -->
+        <a class="btn btn-primary" href="tel:01XXXXXXXXX">📞 اتصل بنا: 01XXXXXXXXX</a>
+        <a class="btn btn-outline" href="https://wa.me/201XXXXXXXXX" target="_blank" rel="noopener">واتساب</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">© تاون كلينك – Town Clinic. جميع الحقوق محفوظة.</div>
+</footer>
+
+</body>
+</html>
